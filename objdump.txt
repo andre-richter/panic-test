@@ -1,0 +1,122 @@
+
+target/x86_64-blog_os/release/panic:	file format ELF64-x86-64
+
+Disassembly of section .text:
+rust_begin_unwind:
+  201000:	0f 0b 	ud2
+  201002:	0f 0b 	ud2
+  201004:	cc 	int3
+  201005:	cc 	int3
+  201006:	cc 	int3
+  201007:	cc 	int3
+  201008:	cc 	int3
+  201009:	cc 	int3
+  20100a:	cc 	int3
+  20100b:	cc 	int3
+  20100c:	cc 	int3
+  20100d:	cc 	int3
+  20100e:	cc 	int3
+  20100f:	cc 	int3
+
+_start:
+  201010:	48 8b 0c 25 37 13 00 00 	movq	0x1337, %rcx
+  201018:	48 85 c9 	testq	%rcx, %rcx
+  20101b:	74 15 	je	0x15 <_start+0x22>
+  20101d:	b8 00 01 00 00 	movl	$0x100, %eax
+  201022:	31 d2 	xorl	%edx, %edx
+  201024:	48 f7 f1 	divq	%rcx
+  201027:	48 89 04 25 37 13 00 00 	movq	%rax, 0x1337
+  20102f:	90 	nop
+  201030:	eb fe 	jmp	-0x2 <_start+0x20>
+  201032:	50 	pushq	%rax
+  201033:	48 8d 3d c6 0f 00 00 	leaq	0xfc6(%rip), %rdi
+  20103a:	e8 21 00 00 00 	callq	0x21 <core::panicking::panic::h505722727939be58>
+  20103f:	0f 0b 	ud2
+  201041:	cc 	int3
+  201042:	cc 	int3
+  201043:	cc 	int3
+  201044:	cc 	int3
+  201045:	cc 	int3
+  201046:	cc 	int3
+  201047:	cc 	int3
+  201048:	cc 	int3
+  201049:	cc 	int3
+  20104a:	cc 	int3
+  20104b:	cc 	int3
+  20104c:	cc 	int3
+  20104d:	cc 	int3
+  20104e:	cc 	int3
+  20104f:	cc 	int3
+
+core::ptr::drop_in_place::h0e8c3b1b15f93930:
+  201050:	c3 	retq
+  201051:	cc 	int3
+  201052:	cc 	int3
+  201053:	cc 	int3
+  201054:	cc 	int3
+  201055:	cc 	int3
+  201056:	cc 	int3
+  201057:	cc 	int3
+  201058:	cc 	int3
+  201059:	cc 	int3
+  20105a:	cc 	int3
+  20105b:	cc 	int3
+  20105c:	cc 	int3
+  20105d:	cc 	int3
+  20105e:	cc 	int3
+  20105f:	cc 	int3
+
+core::panicking::panic::h505722727939be58:
+  201060:	48 83 ec 58 	subq	$0x58, %rsp
+  201064:	48 8b 07 	movq	(%rdi), %rax
+  201067:	48 8b 4f 08 	movq	0x8(%rdi), %rcx
+  20106b:	48 8b 57 10 	movq	0x10(%rdi), %rdx
+  20106f:	48 8b 77 18 	movq	0x18(%rdi), %rsi
+  201073:	48 8b 7f 20 	movq	0x20(%rdi), %rdi
+  201077:	48 89 04 24 	movq	%rax, (%rsp)
+  20107b:	48 89 4c 24 08 	movq	%rcx, 0x8(%rsp)
+  201080:	48 89 e0 	movq	%rsp, %rax
+  201083:	48 89 44 24 28 	movq	%rax, 0x28(%rsp)
+  201088:	48 c7 44 24 30 01 00 00 00 	movq	$0x1, 0x30(%rsp)
+  201091:	48 c7 44 24 38 00 00 00 00 	movq	$0x0, 0x38(%rsp)
+  20109a:	48 8d 05 1f f1 ff ff 	leaq	-0xee1(%rip), %rax
+  2010a1:	48 89 44 24 48 	movq	%rax, 0x48(%rsp)
+  2010a6:	48 c7 44 24 50 00 00 00 00 	movq	$0x0, 0x50(%rsp)
+  2010af:	48 89 54 24 10 	movq	%rdx, 0x10(%rsp)
+  2010b4:	48 89 74 24 18 	movq	%rsi, 0x18(%rsp)
+  2010b9:	48 89 7c 24 20 	movq	%rdi, 0x20(%rsp)
+  2010be:	48 8d 7c 24 28 	leaq	0x28(%rsp), %rdi
+  2010c3:	48 8d 74 24 10 	leaq	0x10(%rsp), %rsi
+  2010c8:	e8 03 00 00 00 	callq	0x3 <core::panicking::panic_fmt::he1cdea76fbade831>
+  2010cd:	0f 0b 	ud2
+  2010cf:	cc 	int3
+
+core::panicking::panic_fmt::he1cdea76fbade831:
+  2010d0:	48 83 ec 38 	subq	$0x38, %rsp
+  2010d4:	48 8b 06 	movq	(%rsi), %rax
+  2010d7:	48 8b 4e 08 	movq	0x8(%rsi), %rcx
+  2010db:	48 8b 56 10 	movq	0x10(%rsi), %rdx
+  2010df:	48 8d 35 da f0 ff ff 	leaq	-0xf26(%rip), %rsi
+  2010e6:	48 89 74 24 08 	movq	%rsi, 0x8(%rsp)
+  2010eb:	48 8d 35 36 0f 00 00 	leaq	0xf36(%rip), %rsi
+  2010f2:	48 89 74 24 10 	movq	%rsi, 0x10(%rsp)
+  2010f7:	48 89 7c 24 18 	movq	%rdi, 0x18(%rsp)
+  2010fc:	48 89 44 24 20 	movq	%rax, 0x20(%rsp)
+  201101:	48 89 4c 24 28 	movq	%rcx, 0x28(%rsp)
+  201106:	48 89 54 24 30 	movq	%rdx, 0x30(%rsp)
+  20110b:	48 8d 7c 24 08 	leaq	0x8(%rsp), %rdi
+  201110:	e8 eb fe ff ff 	callq	-0x115 <rust_begin_unwind>
+  201115:	0f 0b 	ud2
+  201117:	cc 	int3
+  201118:	cc 	int3
+  201119:	cc 	int3
+  20111a:	cc 	int3
+  20111b:	cc 	int3
+  20111c:	cc 	int3
+  20111d:	cc 	int3
+  20111e:	cc 	int3
+  20111f:	cc 	int3
+
+<T as core::any::Any>::get_type_id::hd0cbf7fdda93db6b:
+  201120:	48 b8 02 10 63 a7 59 af 17 2f 	movabsq	$0x2f17af59a7631002, %rax
+  20112a:	c3 	retq
